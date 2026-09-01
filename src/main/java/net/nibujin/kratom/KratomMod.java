@@ -4,6 +4,8 @@ import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
 
+import net.nibujin.kratom.creativemodetab.ModCreativeModeTabs;
+import net.nibujin.kratom.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +15,8 @@ public class KratomMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItems.registerModItems();
+		ModCreativeModeTabs.registerModCreativeTabs();
 	}
 
 	public static Identifier id(String path) {
