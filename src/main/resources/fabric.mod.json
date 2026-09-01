@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "kratom",
+	"version": "${version}",
+	"name": "Kratom Mod",
+	"description": "Mod that adds the substance Kratom into Minecraft!",
+	"authors": [
+		"nibujin/CoolKit"
+	],
+	"contact": {
+		"homepage": "https://github.com/nibujin",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT-License",
+	"icon": "assets/kratom/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.nibujin.kratom.KratomMod"
+		],
+		"fabric-datagen": [
+			"net.nibujin.kratom.KratomModDataGenerator"
+		]
+	},
+	"mixins": [
+		"kratom.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
