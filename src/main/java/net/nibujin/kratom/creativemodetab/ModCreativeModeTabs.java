@@ -18,6 +18,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                        output.accept(ModItems.KRATOM_POWDER);
                        output.accept(ModItems.KRATOM_LEAF);
+                       output.accept(ModItems.DRIED_KRATOM_LEAF);
                        output.accept(ModItems.KRATOM_SEEDS);
                        output.accept(ModItems.KRATOM_BOTTLE);
                        output.accept(ModItems.WOODEN_MORTAR_AND_PESTLE);

@@ -26,5 +26,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.WOODEN_MORTAR_AND_PESTLE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.STONE_MORTAR_AND_PESTLE, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.KRATOM_BOTTLE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.DRIED_KRATOM_LEAF, ModelTemplates.FLAT_ITEM);
     }
 }

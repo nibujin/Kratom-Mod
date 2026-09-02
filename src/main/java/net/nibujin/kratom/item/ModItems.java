@@ -16,6 +16,7 @@ public class ModItems {
 
     public static final Item KRATOM_POWDER = registerItem("kratom_powder", Item::new);
     public static final Item KRATOM_LEAF = registerItem("kratom_leaf", Item::new);
+    public static final Item DRIED_KRATOM_LEAF = registerItem("dried_kratom_leaf", Item::new);
     public static final Item KRATOM_SEEDS = registerItem("kratom_seeds", Item::new);
     public static final Item WOODEN_MORTAR_AND_PESTLE = registerItem("wooden_mortar_and_pestle", Item::new);
     public static final Item STONE_MORTAR_AND_PESTLE = registerItem("stone_mortar_and_pestle", Item::new);
@@ -34,6 +35,7 @@ public class ModItems {
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register(fabricCreativeModeTabOutput -> {
             fabricCreativeModeTabOutput.accept(KRATOM_LEAF);
+            fabricCreativeModeTabOutput.accept(DRIED_KRATOM_LEAF);
             fabricCreativeModeTabOutput.accept(KRATOM_SEEDS);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(fabricCreativeModeTabOutput -> {
