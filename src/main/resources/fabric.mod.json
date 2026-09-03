@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "kratom",
 	"version": "${version}",
-	"name": "Kratom Mod",
+	"name": "Kratomified",
 	"description": "Mod that adds the substance Kratom into Minecraft!",
 	"authors": [
 		"nibujin/CoolKit"
