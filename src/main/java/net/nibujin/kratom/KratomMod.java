@@ -2,10 +2,13 @@ package net.nibujin.kratom;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.resources.Identifier;
 
 import net.nibujin.kratom.creativemodetab.ModCreativeModeTabs;
 import net.nibujin.kratom.item.ModItems;
+import net.nibujin.kratom.loot.ModLootTableModifiers;
+import net.nibujin.kratom.potion.ModPotions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +20,9 @@ public class KratomMod implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
 		ModCreativeModeTabs.registerModCreativeTabs();
+		ModPotions.registerPotions();
+
+		LootTableEvents.MODIFY.register(ModLootTableModifiers::ModifyLootTables);
 	}
 
 	public static Identifier id(String path) {
