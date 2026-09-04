@@ -2,6 +2,8 @@ package net.nibujin.kratom;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.nibujin.kratom.datagen.ModBlockLootTableProvider;
+import net.nibujin.kratom.datagen.ModBlockTagsProvider;
 import net.nibujin.kratom.datagen.ModModelProvider;
 import net.nibujin.kratom.datagen.ModRecipeProvider;
 
@@ -12,5 +14,7 @@ public class KratomModDataGenerator implements DataGeneratorEntrypoint {
 
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModRecipeProvider::new);
+        pack.addProvider(ModBlockTagsProvider::new);
+        pack.addProvider(ModBlockLootTableProvider::new);
     }
 }

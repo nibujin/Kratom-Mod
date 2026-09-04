@@ -8,6 +8,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.nibujin.kratom.KratomMod;
+import net.nibujin.kratom.block.ModBlocks;
 import net.nibujin.kratom.item.ModItems;
 
 public class ModCreativeModeTabs {
@@ -23,6 +24,7 @@ public class ModCreativeModeTabs {
                        output.accept(ModItems.KRATOM_BOTTLE);
                        output.accept(ModItems.WOODEN_MORTAR_AND_PESTLE);
                        output.accept(ModItems.STONE_MORTAR_AND_PESTLE);
+                       output.accept(ModBlocks.KRATOM_LEAF_BALE);
 
                     }).build());
 

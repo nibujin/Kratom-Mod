@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.resources.Identifier;
 
+import net.nibujin.kratom.block.ModBlocks;
 import net.nibujin.kratom.creativemodetab.ModCreativeModeTabs;
 import net.nibujin.kratom.data.ModDataComponents;
 import net.nibujin.kratom.item.ModItems;
@@ -20,6 +21,7 @@ public class KratomMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 		ModCreativeModeTabs.registerModCreativeTabs();
 		ModRecipes.registerRecipes();
 		ModDataComponents.registerDataComponents();
