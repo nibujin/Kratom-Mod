@@ -19,5 +19,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.KRATOM_LEAF_BALE.builtInRegistryHolder().key());
         tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.KRATOM_LEAF_BALE.builtInRegistryHolder().key());
+        tag(BlockTags.CROPS)
+                .add(ModBlocks.KRATOM_CROP.builtInRegistryHolder().key());
     }
 }

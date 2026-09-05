@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.nibujin.kratom.item.ModItems;
 
 public class KratomCropBlock extends CropBlock {
     public static final int MAX_AGE = 7;
@@ -16,7 +17,7 @@ public class KratomCropBlock extends CropBlock {
 
     @Override
     protected ItemLike getBaseSeedId() {
-        return null;
+        return ModItems.KRATOM_SEEDS;
     }
 
     @Override

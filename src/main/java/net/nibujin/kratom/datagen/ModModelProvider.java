@@ -7,6 +7,7 @@ import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TexturedModel;
 import net.nibujin.kratom.block.ModBlocks;
+import net.nibujin.kratom.block.custom.KratomCropBlock;
 import net.nibujin.kratom.item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -17,6 +18,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators blockModelGenerators) {
         blockModelGenerators.createAxisAlignedPillarBlock(ModBlocks.KRATOM_LEAF_BALE, TexturedModel.COLUMN);
+        blockModelGenerators.createCropBlock(ModBlocks.KRATOM_CROP, KratomCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
     }
 
     @Override

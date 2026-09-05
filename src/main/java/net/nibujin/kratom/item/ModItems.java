@@ -8,12 +8,10 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemUseAnimation;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Consumable;
 import net.nibujin.kratom.KratomMod;
+import net.nibujin.kratom.block.ModBlocks;
 import net.nibujin.kratom.data.KratomStrain;
 import net.nibujin.kratom.data.ModDataComponents;
 import net.nibujin.kratom.item.custom.KratomBottleItem;
@@ -29,7 +27,6 @@ public class ModItems {
             new KratomStrainItem(properties.component(ModDataComponents.STRAIN, KratomStrain.GREEN)));
     public static final Item DRIED_KRATOM_LEAF = registerItem("dried_kratom_leaf", properties ->
             new KratomStrainItem(properties.component(ModDataComponents.STRAIN, KratomStrain.GREEN)));
-    public static final Item KRATOM_SEEDS = registerItem("kratom_seeds", Item::new);
     public static final Item WOODEN_MORTAR_AND_PESTLE = registerItem("wooden_mortar_and_pestle", Item::new);
     public static final Item STONE_MORTAR_AND_PESTLE = registerItem("stone_mortar_and_pestle", Item::new);
     public static final Item KRATOM_BOTTLE = registerItem("kratom_bottle", properties ->
@@ -43,6 +40,8 @@ public class ModItems {
                             .sound(SoundEvents.GENERIC_DRINK)
                             .hasConsumeParticles(false)
                             .build())));
+    public static final Item KRATOM_SEEDS = registerItem("kratom_seeds",
+                    properties -> new BlockItem(ModBlocks.KRATOM_CROP, properties.useItemDescriptionPrefix()));
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(KratomMod.MOD_ID, name),

@@ -12,7 +12,9 @@ import net.minecraft.world.level.block.HayBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.nibujin.kratom.KratomMod;
+import net.nibujin.kratom.block.custom.KratomCropBlock;
 
 import java.util.function.Function;
 
@@ -21,6 +23,10 @@ public class ModBlocks {
             properties -> new HayBlock(properties.strength(0.5f)
                     .sound(SoundType.GRASS)
                     .mapColor(MapColor.COLOR_GREEN)));
+
+    public static final Block KRATOM_CROP = registerBlockWithoutBlockItem("kratom_crop",
+            properties -> new KratomCropBlock(properties.noCollision().randomTicks().instabreak().sound(SoundType.CROP)
+                    .pushReaction(PushReaction.DESTROY)));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(KratomMod.MOD_ID, name))));
@@ -32,6 +38,11 @@ public class ModBlocks {
         Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(KratomMod.MOD_ID, name),
             new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
                 .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(KratomMod.MOD_ID, name)))));
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Function<BlockBehaviour.Properties, Block> function) {
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(KratomMod.MOD_ID, name))));
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(KratomMod.MOD_ID, name), toRegister);
     }
 
     public static void registerModBlocks() {
