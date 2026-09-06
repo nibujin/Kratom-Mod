@@ -8,6 +8,8 @@
   "item.kratom.wooden_mortar_and_pestle": "Dřevěný hmoždíř s paličkou",
   "item.kratom.stone_mortar_and_pestle": "Kamenný hmoždíř s paličkou",
   "item.kratom.kratom_bottle": "Lahvička Kratomu",
+  "item.kratom.kratom_resin": "Kratomová pryskyřice",
 
-  "block.kratom.kratom_leaf_bale": "Balík listů Kratomu"
+  "block.kratom.kratom_leaf_bale": "Balík listů Kratomu",
+  "block.kratom.kratom_crop": "Rostlina Kratomu"
 }

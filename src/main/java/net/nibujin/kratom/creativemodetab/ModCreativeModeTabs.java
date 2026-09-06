@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                        output.accept(ModItems.KRATOM_BOTTLE);
                        output.accept(ModItems.WOODEN_MORTAR_AND_PESTLE);
                        output.accept(ModItems.STONE_MORTAR_AND_PESTLE);
+                       output.accept(ModItems.KRATOM_RESIN);
                        output.accept(ModBlocks.KRATOM_LEAF_BALE);
 
                     }).build());

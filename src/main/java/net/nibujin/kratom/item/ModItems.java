@@ -21,14 +21,17 @@ import java.util.function.Function;
 
 public class ModItems {
 
+    public static final Item KRATOM_RESIN = registerItem("kratom_resin", Item::new);
     public static final Item KRATOM_POWDER = registerItem("kratom_powder", properties ->
             new KratomStrainItem(properties.component(ModDataComponents.STRAIN, KratomStrain.GREEN)));
     public static final Item KRATOM_LEAF = registerItem("kratom_leaf", properties ->
             new KratomStrainItem(properties.component(ModDataComponents.STRAIN, KratomStrain.GREEN)));
     public static final Item DRIED_KRATOM_LEAF = registerItem("dried_kratom_leaf", properties ->
             new KratomStrainItem(properties.component(ModDataComponents.STRAIN, KratomStrain.GREEN)));
-    public static final Item WOODEN_MORTAR_AND_PESTLE = registerItem("wooden_mortar_and_pestle", Item::new);
-    public static final Item STONE_MORTAR_AND_PESTLE = registerItem("stone_mortar_and_pestle", Item::new);
+    public static final Item WOODEN_MORTAR_AND_PESTLE = registerItem("wooden_mortar_and_pestle", properties ->
+            new Item(properties .stacksTo(1)));
+    public static final Item STONE_MORTAR_AND_PESTLE = registerItem("stone_mortar_and_pestle", properties ->
+            new Item(properties .stacksTo(1)));
     public static final Item KRATOM_BOTTLE = registerItem("kratom_bottle", properties ->
             new KratomBottleItem(properties
                     .stacksTo(1)

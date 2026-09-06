@@ -8,6 +8,7 @@ import net.minecraft.resources.Identifier;
 import net.nibujin.kratom.block.ModBlocks;
 import net.nibujin.kratom.creativemodetab.ModCreativeModeTabs;
 import net.nibujin.kratom.data.ModDataComponents;
+import net.nibujin.kratom.effect.ModEffects;
 import net.nibujin.kratom.item.ModItems;
 import net.nibujin.kratom.loot.ModLootTableModifiers;
 import net.nibujin.kratom.recipe.ModRecipes;
@@ -25,6 +26,7 @@ public class KratomMod implements ModInitializer {
 		ModCreativeModeTabs.registerModCreativeTabs();
 		ModRecipes.registerRecipes();
 		ModDataComponents.registerDataComponents();
+		ModEffects.registerEffects();
 
 		LootTableEvents.MODIFY.register(ModLootTableModifiers::ModifyLootTables);
 	}
