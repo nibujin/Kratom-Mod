@@ -11,5 +11,17 @@
   "item.kratom.kratom_resin": "Kratom Resin",
 
   "block.kratom.kratom_leaf_bale": "Kratom Leaf Bale",
-  "block.kratom.kratom_crop": "Kratom Crop"
+  "block.kratom.kratom_crop": "Kratom Crop",
+
+  "effect.kratom.sedated": "Sedated",
+  "effect.kratom.sedated.description": "Effects of red strain Kratom",
+
+  "effect.kratom.stimulated": "Stimulated",
+  "effect.kratom.stimulated.description": "Effects of white strain Kratom",
+
+  "effect.kratom.relaxed": "Relaxed",
+  "effect.kratom.relaxed.description": "Effects of green strain Kratom",
+
+  "effect.kratom.wobbles": "The Wobbles",
+  "effect.kratom.wobbles.description": "Effect of overdosing on Kratom"
 }
